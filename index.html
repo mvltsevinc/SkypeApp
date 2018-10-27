@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!--Bootstrap-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Realtime communication with WebRTC</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <video id="localVideo" autoplay playsinline></video>
+                <div class="col">
+                    <label>Video Source:</label>
+                </div>
+                <div class="col">
+                    <select id="videoSelect" class="form-control form-control-sm">
+                    </select>
+                </div>
+                <div class="col">
+                    <label>Audio Source:</label>
+                </div>
+                <div class="col">
+                    <select id="audioSelect" class="form-control form-control-sm">
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <video id="remoteVideo" autoplay playsinline></video>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+
+            <button id="startButton" onclick="startAction()">Start</button>
+            <button id="callButton" onclick="callAction()">Call</button>
+            <button id="hangupButton" onclick="hangupAction()">Hang Up</button>
+        </div>
+    </div>
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sourceSelection.js"></script>
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+</body>
+
+</html>
