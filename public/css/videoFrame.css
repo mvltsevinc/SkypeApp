@@ -1,0 +1,20 @@
+/* Container needed to position the button. Adjust the width as needed */
+.container-video {
+  position: relative;
+  width: 50%;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container-video .btn-group {
+  position: absolute;
+  top: 90%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}

@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <!--Bootstrap-->
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/videoFrame.css" />
+    <!--CSS-->
 </head>
 
 <body>
@@ -19,7 +22,15 @@
         </div>
         <div class="row">
             <div class="col">
-                <video id="localVideo" autoplay playsinline></video>
+                <div class="container-video">
+                    <video id="localVideo" autoplay playsinline></video>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary" id="startButton" onclick="startAction()">Start</button>
+                        <button type="button" class="btn btn-success" id="callButton" onclick="callAction()">Call</button>
+                        <button type="button" class="btn btn-danger" id="hangupButton" onclick="hangupAction()">Hang Up</button>
+                    </div>
+                </div>
+
                 <div class="col">
                     <label>Video Source:</label>
                 </div>
@@ -39,16 +50,8 @@
                 <video id="remoteVideo" autoplay playsinline></video>
             </div>
         </div>
-        <br/>
-        <div class="row">
-
-            <button id="startButton" onclick="startAction()">Start</button>
-            <button id="callButton" onclick="callAction()">Call</button>
-            <button id="hangupButton" onclick="hangupAction()">Hang Up</button>
-        </div>
+        <br />
     </div>
-
-
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
